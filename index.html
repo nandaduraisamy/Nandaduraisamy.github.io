@@ -6,16 +6,17 @@
 <title>Nandakumar Duraisamy | Operations, Logistics & Administration</title>
 <meta name="description" content="Professional profile of Nandakumar Duraisamy — administration, operations, logistics, documentation and business development. Based in Erode, Tamil Nadu, India.">
 <meta name="color-scheme" content="dark light">
-<meta name="theme-color" content="#070f1b" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f5f8fc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a0b2e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fdf6ff" media="(prefers-color-scheme: light)">
 
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Nandakumar Duraisamy | Operations, Logistics & Administration">
 <meta property="og:description" content="Administration · Operations · Logistics · Documentation · Business Development">
 <meta property="og:url" content="https://nandaduraisamy.github.io/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://nandaduraisamy.github.io/photo.jpg">
+<meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%236ee7c2'/%3E%3Ctext x='32' y='44' font-family='system-ui,sans-serif' font-size='27' font-weight='800' text-anchor='middle' fill='%23052018'%3END%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23a855f7'/%3E%3Cstop offset='1' stop-color='%23ec4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='15' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='system-ui,sans-serif' font-size='26' font-weight='800' text-anchor='middle' fill='%23fff'%3END%3C/text%3E%3C/svg%3E">
 
 <script>
   (function () {
@@ -33,31 +34,45 @@
 <style>
 :root{
   --max:1080px;
-  --radius:18px;
-  --bg:#070f1b;
-  --panel:#0f1e31;
-  --panel-2:#132a45;
-  --ink:#eaf2ff;
-  --muted:#a2b4ca;
-  --accent:#6ee7c2;
-  --accent-ink:#052018;
-  --line:#1f3249;
-  --glow-1:rgba(110,231,194,.13);
-  --glow-2:rgba(96,165,250,.13);
-  --shadow:0 18px 40px rgba(0,0,0,.38);
+  --radius:20px;
+
+  /* vibrant palette */
+  --violet:#a855f7;
+  --pink:#ec4899;
+  --orange:#f97316;
+  --amber:#f59e0b;
+  --teal:#14b8a6;
+  --blue:#3b82f6;
+  --green:#10b981;
+
+  --bg:#140a24;
+  --bg-2:#1a0b2e;
+  --panel:#1f1136;
+  --panel-2:#2a1747;
+  --ink:#f5edff;
+  --muted:#b8a9d0;
+  --line:#3a2560;
+
+  --grad-hero:linear-gradient(135deg,#a855f7 0%,#ec4899 50%,#f97316 100%);
+  --grad-btn:linear-gradient(135deg,#a855f7 0%,#ec4899 100%);
+  --grad-teal:linear-gradient(135deg,#14b8a6 0%,#3b82f6 100%);
+  --grad-warm:linear-gradient(135deg,#f97316 0%,#f59e0b 100%);
+  --grad-cool:linear-gradient(135deg,#3b82f6 0%,#a855f7 100%);
+  --shadow:0 20px 50px rgba(168,85,247,.18);
+  --shadow-strong:0 24px 60px rgba(236,72,153,.22);
 }
 html[data-theme="light"]{
-  --bg:#f5f8fc;
+  --bg:#fdf6ff;
+  --bg-2:#f5ebff;
   --panel:#ffffff;
-  --panel-2:#eff5fb;
-  --ink:#0a1a2b;
-  --muted:#51637a;
-  --accent:#0d7d6c;
-  --accent-ink:#ffffff;
-  --line:#dbe5f1;
-  --glow-1:rgba(13,125,108,.10);
-  --glow-2:rgba(37,99,235,.10);
-  --shadow:0 14px 30px rgba(15,23,42,.08);
+  --panel-2:#faf2ff;
+  --ink:#1a0b2e;
+  --muted:#5a4a73;
+  --line:#e8d9f5;
+  --grad-hero:linear-gradient(135deg,#a855f7 0%,#ec4899 50%,#f97316 100%);
+  --grad-btn:linear-gradient(135deg,#a855f7 0%,#ec4899 100%);
+  --shadow:0 14px 36px rgba(168,85,247,.14);
+  --shadow-strong:0 18px 44px rgba(236,72,153,.18);
 }
 
 *{box-sizing:border-box}
@@ -66,23 +81,33 @@ body{
   margin:0;
   background:var(--bg);
   background-image:
-    radial-gradient(900px 520px at 12% -12%, var(--glow-1), transparent 62%),
-    radial-gradient(760px 460px at 100% 0%, var(--glow-2), transparent 60%);
+    radial-gradient(1000px 600px at 8% -8%, rgba(168,85,247,.28), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(236,72,153,.22), transparent 55%),
+    radial-gradient(700px 500px at 50% 100%, rgba(20,184,166,.16), transparent 60%),
+    radial-gradient(600px 400px at 0% 60%, rgba(249,115,22,.12), transparent 55%);
   background-attachment:fixed;
   color:var(--ink);
   font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   -webkit-font-smoothing:antialiased;
   transition:background-color .25s ease,color .25s ease;
 }
-a{color:var(--accent);text-decoration:none}
+html[data-theme="light"] body{
+  background-image:
+    radial-gradient(1000px 600px at 8% -8%, rgba(168,85,247,.20), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(236,72,153,.16), transparent 55%),
+    radial-gradient(700px 500px at 50% 100%, rgba(20,184,166,.12), transparent 60%),
+    radial-gradient(600px 400px at 0% 60%, rgba(249,115,22,.10), transparent 55%);
+}
+
+a{color:var(--pink);text-decoration:none}
 a:hover{text-decoration:underline}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
+:focus-visible{outline:2px solid var(--pink);outline-offset:3px;border-radius:8px}
 
 .wrap{max-width:var(--max);margin-inline:auto;padding:0 22px}
 
 .skip{
   position:absolute;left:-9999px;top:0;z-index:100;
-  background:var(--accent);color:var(--accent-ink);
+  background:var(--grad-btn);color:#fff;
   padding:10px 16px;border-radius:0 0 10px 0;font-weight:800;
 }
 .skip:focus{left:0;text-decoration:none}
@@ -90,20 +115,21 @@ a:hover{text-decoration:underline}
 /* ---------- Header ---------- */
 .hdr{
   position:sticky;top:0;z-index:50;
-  background:color-mix(in srgb, var(--bg) 82%, transparent);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
+  background:color-mix(in srgb, var(--bg) 78%, transparent);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
   border-bottom:1px solid var(--line);
 }
-.hdr-inner{display:flex;align-items:center;gap:18px;padding:13px 0}
+.hdr-inner{display:flex;align-items:center;gap:16px;padding:13px 0}
 .brand{
-  font-weight:900;letter-spacing:.4px;color:var(--ink);
-  font-size:1.05rem;padding:8px 12px;border-radius:12px;
-  border:1px solid var(--line);background:var(--panel);
-  transition:transform .18s ease,border-color .18s ease;
+  font-weight:900;letter-spacing:.4px;color:#fff;
+  font-size:1.05rem;padding:9px 14px;border-radius:14px;
+  background:var(--grad-btn);
+  box-shadow:0 6px 18px rgba(168,85,247,.35);
+  transition:transform .18s ease,box-shadow .18s ease;
 }
-.brand:hover{text-decoration:none;transform:translateY(-1px);border-color:var(--accent)}
-.brand span{color:var(--accent)}
+.brand:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 10px 24px rgba(236,72,153,.45)}
+.brand span{color:#fff;opacity:.85}
 .navlinks{display:flex;gap:4px;flex-wrap:wrap;font-size:.9rem;margin-left:auto}
 .navlinks a{
   color:var(--muted);font-weight:650;padding:8px 11px;border-radius:999px;
@@ -113,9 +139,9 @@ a:hover{text-decoration:underline}
 .theme-btn{
   display:grid;place-items:center;width:40px;height:40px;flex:none;
   border-radius:12px;border:1px solid var(--line);background:var(--panel);
-  color:var(--ink);cursor:pointer;transition:border-color .18s ease,transform .18s ease;
+  color:var(--ink);cursor:pointer;transition:border-color .18s ease,transform .18s ease,color .18s ease;
 }
-.theme-btn:hover{border-color:var(--accent);transform:translateY(-1px)}
+.theme-btn:hover{border-color:var(--pink);transform:translateY(-1px);color:var(--pink)}
 .theme-btn svg{width:18px;height:18px;fill:currentColor}
 html[data-theme="light"] .icon-sun{display:none}
 html[data-theme="dark"] .icon-moon{display:none}
@@ -126,12 +152,20 @@ html[data-theme="dark"] .icon-moon{display:none}
   align-items:start;padding:70px 22px 54px;
 }
 .eyebrow{
-  color:var(--accent);text-transform:uppercase;letter-spacing:.16em;
-  font-weight:800;font-size:.75rem;margin:0 0 12px;
+  display:inline-block;
+  color:#fff;
+  background:var(--grad-btn);
+  padding:5px 12px;border-radius:999px;
+  text-transform:uppercase;letter-spacing:.14em;
+  font-weight:800;font-size:.72rem;margin:0 0 16px;
+  box-shadow:0 4px 14px rgba(168,85,247,.3);
 }
 h1{
   font-size:clamp(2.4rem,6.5vw,4.4rem);line-height:1.03;
-  letter-spacing:-.035em;margin:0 0 16px;font-weight:850;
+  letter-spacing:-.035em;margin:0 0 18px;font-weight:850;
+  background:var(--grad-hero);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
 }
 h2{font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.2;margin:0 0 8px;letter-spacing:-.02em}
 h3{margin:0 0 4px;font-size:1.06rem;letter-spacing:-.01em}
@@ -142,13 +176,16 @@ h3{margin:0 0 4px;font-size:1.06rem;letter-spacing:-.01em}
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
 .btn{
   display:inline-flex;align-items:center;gap:8px;
-  padding:12px 20px;border-radius:12px;font-weight:800;font-size:.95rem;
-  background:var(--accent);color:var(--accent-ink);border:1px solid transparent;
-  transition:transform .18s ease,opacity .18s ease,box-shadow .18s ease;
+  padding:12px 22px;border-radius:14px;font-weight:800;font-size:.95rem;
+  background:var(--grad-btn);color:#fff;border:1px solid transparent;
+  box-shadow:0 10px 26px rgba(236,72,153,.3);
+  transition:transform .18s ease,box-shadow .18s ease,opacity .18s ease;
 }
-.btn:hover{text-decoration:none;transform:translateY(-2px);box-shadow:var(--shadow);opacity:.95}
-.btn.secondary{background:var(--panel);color:var(--ink);border-color:var(--line)}
-.btn.secondary:hover{border-color:var(--accent)}
+.btn:hover{text-decoration:none;transform:translateY(-2px);box-shadow:0 14px 32px rgba(236,72,153,.42);opacity:.95}
+.btn.secondary{
+  background:var(--panel);color:var(--ink);border-color:var(--line);box-shadow:none;
+}
+.btn.secondary:hover{border-color:var(--pink);color:var(--pink);box-shadow:0 6px 18px rgba(236,72,153,.15)}
 
 .stats{
   display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
@@ -156,77 +193,156 @@ h3{margin:0 0 4px;font-size:1.06rem;letter-spacing:-.01em}
   border-top:1px solid var(--line);
 }
 .stats li{display:flex;flex-direction:column;gap:2px}
-.stats strong{font-size:1.35rem;letter-spacing:-.02em;line-height:1}
-.stats span{color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.stats strong{
+  font-size:1.4rem;letter-spacing:-.02em;line-height:1;font-weight:850;
+  background:var(--grad-hero);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.stats span{color:var(--muted);font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
 
+/* ---------- Photo profile card ---------- */
 .profile{
+  position:relative;
   background:linear-gradient(155deg,var(--panel-2),var(--panel));
-  border:1px solid var(--line);border-radius:22px;padding:26px;
-  box-shadow:var(--shadow);
+  border:1px solid var(--line);border-radius:26px;padding:30px 24px 26px;
+  box-shadow:var(--shadow-strong);
+  text-align:center;
+  overflow:hidden;
 }
-.initials{
-  width:74px;height:74px;border-radius:20px;display:grid;place-items:center;
-  background:var(--accent);color:var(--accent-ink);
-  font-size:1.5rem;font-weight:900;margin-bottom:20px;letter-spacing:-.02em;
+.profile::before{
+  content:"";position:absolute;inset:-2px;border-radius:26px;z-index:-1;
+  background:var(--grad-hero);opacity:.55;filter:blur(18px);
 }
-.profile h3{margin-bottom:8px}
+.photo-wrap{
+  position:relative;width:150px;height:150px;margin:0 auto 20px;
+}
+.photo-wrap::before{
+  content:"";position:absolute;inset:-4px;border-radius:50%;
+  background:var(--grad-hero);
+  animation:spin 8s linear infinite;
+}
+.photo-wrap::after{
+  content:"";position:absolute;inset:0;border-radius:50%;
+  background:var(--panel);z-index:1;
+}
+.photo{
+  position:relative;z-index:2;width:100%;height:100%;
+  border-radius:50%;object-fit:cover;display:block;
+  border:3px solid var(--panel);
+  background:var(--grad-cool);
+}
+.photo-fallback{
+  position:relative;z-index:2;width:100%;height:100%;
+  border-radius:50%;display:none;place-items:center;
+  background:var(--grad-cool);color:#fff;
+  font-size:2.4rem;font-weight:900;letter-spacing:-.02em;
+  border:3px solid var(--panel);
+}
+.photo-wrap.no-photo .photo{display:none}
+.photo-wrap.no-photo .photo-fallback{display:grid}
+
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.profile h3{margin-bottom:8px;font-size:1.15rem}
 .profile p{color:var(--muted);margin:0 0 14px;font-size:.95rem}
 .profile p:last-child{margin-bottom:0}
 .profile strong{display:block;color:var(--ink);font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:3px}
+.profile .tagline{
+  display:inline-block;
+  background:linear-gradient(135deg,rgba(20,184,166,.18),rgba(59,130,246,.18));
+  border:1px solid rgba(20,184,166,.4);
+  color:var(--teal);
+  padding:5px 12px;border-radius:999px;font-size:.78rem;font-weight:800;
+  margin:0 0 16px;
+}
 
 /* ---------- Sections ---------- */
-section.sec{padding:52px 0;border-top:1px solid var(--line)}
-.section-intro{color:var(--muted);margin:0 0 26px;max-width:70ch}
+section.sec{padding:56px 0;border-top:1px solid var(--line)}
+.section-intro{color:var(--muted);margin:0 0 28px;max-width:70ch}
 
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 
 .card{
+  position:relative;
   background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
   padding:22px;
-  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+  transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
+  overflow:hidden;
 }
-.card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:var(--shadow)}
+.card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--grad-btn);opacity:0;transition:opacity .22s ease;
+}
+.card:hover{transform:translateY(-4px);border-color:var(--pink);box-shadow:var(--shadow)}
+.card:hover::before{opacity:1}
 .card p{color:var(--muted);margin:7px 0 0;font-size:.95rem}
 .card p strong{color:var(--ink);font-weight:750}
 
 .date{
   display:inline-block;
-  color:var(--accent);font-size:.74rem;font-weight:800;
+  color:#fff;font-size:.72rem;font-weight:800;
   text-transform:uppercase;letter-spacing:.09em;
-  background:color-mix(in srgb, var(--accent) 12%, transparent);
-  border:1px solid color-mix(in srgb, var(--accent) 26%, transparent);
-  border-radius:999px;padding:4px 10px;margin-bottom:12px;
+  background:var(--grad-btn);
+  border-radius:999px;padding:4px 11px;margin-bottom:12px;
+  box-shadow:0 4px 12px rgba(168,85,247,.28);
 }
 
 .bullets{margin:12px 0 0;padding-left:18px;color:var(--muted);font-size:.93rem}
 .bullets li+li{margin-top:6px}
+.bullets li::marker{color:var(--pink)}
 
+/* ---------- Tags ---------- */
 .tags{display:flex;gap:9px;flex-wrap:wrap}
 .tag{
   border:1px solid var(--line);background:var(--panel);border-radius:999px;
   padding:8px 14px;color:var(--ink);font-size:.9rem;font-weight:600;
-  transition:border-color .18s ease,transform .18s ease,color .18s ease;
+  transition:border-color .18s ease,transform .18s ease,color .18s ease,background-color .18s ease;
 }
-.tag:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.tag:hover{
+  transform:translateY(-2px);
+  color:#fff;border-color:transparent;
+}
+/* colour-varied tags for visual rhythm */
+.tags .tag:nth-child(5n+1):hover{background:linear-gradient(135deg,#a855f7,#ec4899)}
+.tags .tag:nth-child(5n+2):hover{background:linear-gradient(135deg,#ec4899,#f97316)}
+.tags .tag:nth-child(5n+3):hover{background:linear-gradient(135deg,#f97316,#f59e0b)}
+.tags .tag:nth-child(5n+4):hover{background:linear-gradient(135deg,#14b8a6,#3b82f6)}
+.tags .tag:nth-child(5n+5):hover{background:linear-gradient(135deg,#3b82f6,#a855f7)}
 
 .edu{margin-bottom:14px}
+
+/* ---------- Languages ---------- */
 .lang-card{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .lang-card h3{margin:0}
 .lang-card .level{
   font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;
-  color:var(--accent);
-  background:color-mix(in srgb, var(--accent) 12%, transparent);
-  border:1px solid color-mix(in srgb, var(--accent) 26%, transparent);
-  border-radius:999px;padding:3px 9px;white-space:nowrap;
+  color:#fff;border-radius:999px;padding:4px 10px;white-space:nowrap;
 }
+.level.native{background:linear-gradient(135deg,#10b981,#14b8a6)}
+.level.proficient{background:linear-gradient(135deg,#3b82f6,#a855f7)}
+.level.intermediate{background:linear-gradient(135deg,#f97316,#f59e0b)}
+.level.beginner{background:linear-gradient(135deg,#a855f7,#ec4899)}
 
 /* ---------- Contact ---------- */
 .contact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .contact .card h3{font-size:1.02rem;word-break:break-word}
 .contact .card a{font-weight:750}
 .contact .card a:hover{text-decoration:underline}
+.contact .card:nth-child(1)::before{background:linear-gradient(135deg,#a855f7,#ec4899);opacity:1}
+.contact .card:nth-child(2)::before{background:linear-gradient(135deg,#14b8a6,#3b82f6);opacity:1}
+
 .small{font-size:.88rem;color:var(--muted)}
+
+/* ---------- Section accent lines ---------- */
+#about .eyebrow{background:linear-gradient(135deg,#3b82f6,#a855f7);box-shadow:0 4px 14px rgba(59,130,246,.3)}
+#experience .eyebrow{background:linear-gradient(135deg,#a855f7,#ec4899)}
+#skills .eyebrow{background:linear-gradient(135deg,#ec4899,#f97316);box-shadow:0 4px 14px rgba(236,72,153,.3)}
+#education .eyebrow{background:linear-gradient(135deg,#f97316,#f59e0b);box-shadow:0 4px 14px rgba(249,115,22,.3)}
+#languages .eyebrow{background:linear-gradient(135deg,#14b8a6,#3b82f6);box-shadow:0 4px 14px rgba(20,184,166,.3)}
+#activities .eyebrow{background:linear-gradient(135deg,#10b981,#14b8a6);box-shadow:0 4px 14px rgba(16,185,129,.3)}
+#contact .eyebrow{background:linear-gradient(135deg,#a855f7,#ec4899)}
 
 /* ---------- Footer ---------- */
 footer{
@@ -237,9 +353,10 @@ footer{
 
 /* ---------- Responsive ---------- */
 @media (max-width:900px){
-  .hero{grid-template-columns:1fr;gap:28px;padding:44px 22px 40px}
+  .hero{grid-template-columns:1fr;gap:32px;padding:44px 22px 40px}
   .grid,.grid-3,.contact{grid-template-columns:1fr}
   .stats{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:18px}
+  .profile{max-width:420px;margin:0 auto;width:100%}
 }
 @media (max-width:600px){
   .hdr-inner{flex-wrap:wrap;gap:10px}
@@ -247,12 +364,14 @@ footer{
   .navlinks a{padding:7px 8px}
   .theme-btn{margin-left:auto}
   h1{letter-spacing:-.02em}
-  section.sec{padding:40px 0}
+  section.sec{padding:42px 0}
+  .photo-wrap{width:130px;height:130px}
 }
 
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
   html{scroll-behavior:auto}
+  .photo-wrap::before{animation:none}
 }
 </style>
 </head>
@@ -299,9 +418,12 @@ footer{
     </div>
 
     <aside class="profile">
-      <div class="initials" aria-hidden="true">ND</div>
-      <p class="eyebrow">Professional focus</p>
-      <h3>Operations &amp; Administration</h3>
+      <div class="photo-wrap no-photo" id="photoWrap">
+        <img class="photo" src="photo.jpg" alt="Photo of Nandakumar Duraisamy" onerror="this.parentElement.classList.add('no-photo')" onload="this.parentElement.classList.remove('no-photo')">
+        <div class="photo-fallback" aria-hidden="true">ND</div>
+      </div>
+      <span class="tagline">Operations &amp; Administration</span>
+      <h3>Nandakumar Duraisamy</h3>
       <p>Connecting people, processes and documentation to support reliable day-to-day operations.</p>
       <p><strong>Based in</strong>Erode, Tamil Nadu, India</p>
       <p><strong>Languages</strong>Tamil, English, French, Malayalam, Hindi and Telugu</p>
@@ -528,12 +650,12 @@ footer{
       <p class="section-intro">Comfortable working across multilingual, multicultural environments.</p>
 
       <div class="grid-3">
-        <div class="card lang-card"><h3>Tamil</h3><span class="level">Native</span></div>
-        <div class="card lang-card"><h3>English</h3><span class="level">Proficient</span></div>
-        <div class="card lang-card"><h3>French</h3><span class="level">Intermediate</span></div>
-        <div class="card lang-card"><h3>Malayalam</h3><span class="level">Intermediate</span></div>
-        <div class="card lang-card"><h3>Hindi</h3><span class="level">Beginner</span></div>
-        <div class="card lang-card"><h3>Telugu</h3><span class="level">Beginner</span></div>
+        <div class="card lang-card"><h3>Tamil</h3><span class="level native">Native</span></div>
+        <div class="card lang-card"><h3>English</h3><span class="level proficient">Proficient</span></div>
+        <div class="card lang-card"><h3>French</h3><span class="level intermediate">Intermediate</span></div>
+        <div class="card lang-card"><h3>Malayalam</h3><span class="level intermediate">Intermediate</span></div>
+        <div class="card lang-card"><h3>Hindi</h3><span class="level beginner">Beginner</span></div>
+        <div class="card lang-card"><h3>Telugu</h3><span class="level beginner">Beginner</span></div>
       </div>
     </div>
   </section>
@@ -603,6 +725,7 @@ footer{
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Nandakumar Duraisamy",
+  "image": "https://nandaduraisamy.github.io/photo.jpg",
   "jobTitle": "Chief Administrative Officer",
   "url": "https://nandaduraisamy.github.io/",
   "email": "mailto:nandakumarduraisamy@outlook.com",
