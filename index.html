@@ -40,7 +40,7 @@ body{
   margin:0;
   background:var(--bg);
   color:var(--ink);
-  font:18px/1.7 "Inter",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font:16px/1.7 "Inter",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   -webkit-font-smoothing:antialiased;
   transition:background .25s,color .25s;
 }
@@ -48,7 +48,6 @@ a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 h1,h2,h3,h4{font-weight:600;line-height:1.15;margin:0}
 
-/* ---------- Sidebar ---------- */
 .sidebar{
   position:fixed;top:0;left:0;bottom:0;width:var(--sidebar-w);
   background:var(--sidebar);border-right:1px solid var(--line);
@@ -109,7 +108,6 @@ h1,h2,h3,h4{font-weight:600;line-height:1.15;margin:0}
 html[data-theme="light"] .icon-moon{display:none}
 html[data-theme="dark"] .icon-sun{display:none}
 
-/* ---------- Main ---------- */
 .main{
   margin-left:var(--sidebar-w);
   padding:60px 48px 80px;
@@ -121,7 +119,6 @@ html[data-theme="dark"] .icon-sun{display:none}
   color:var(--accent);margin-bottom:24px;font-weight:700;
 }
 
-/* Hero */
 .hero h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.03em;margin-bottom:12px}
 .hero .tagline{font-size:1.1rem;color:var(--muted);max-width:60ch;margin-bottom:24px}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
@@ -135,7 +132,6 @@ html[data-theme="dark"] .icon-sun{display:none}
 .btn.secondary{background:transparent;color:var(--ink);border-color:var(--line)}
 .btn.secondary:hover{border-color:var(--accent);color:var(--accent);background:transparent}
 
-/* Cards */
 .card{
   background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
   padding:22px;margin-bottom:16px;
@@ -150,7 +146,6 @@ html[data-theme="dark"] .icon-sun{display:none}
 .card li{margin-bottom:5px}
 .card li::marker{color:var(--accent)}
 
-/* Skills */
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
 .skill-item{
   background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
@@ -159,7 +154,6 @@ html[data-theme="dark"] .icon-sun{display:none}
 }
 .skill-item span:last-child{color:var(--accent);font-size:.75rem;font-weight:700}
 
-/* Languages */
 .lang-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
 .lang-item{
   background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
@@ -168,13 +162,11 @@ html[data-theme="dark"] .icon-sun{display:none}
 }
 .lang-item span:last-child{color:var(--muted);font-size:.8rem}
 
-/* Education */
 .edu-item{margin-bottom:18px}
 .edu-item h3{font-size:.95rem;margin-bottom:2px}
 .edu-item .school{font-size:.85rem;color:var(--muted);margin:0}
 .edu-item .grade{font-size:.78rem;color:var(--accent);margin-top:2px}
 
-/* Contact */
 .contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
 .contact-item{
   background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
@@ -183,7 +175,6 @@ html[data-theme="dark"] .icon-sun{display:none}
 .contact-item .label{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:4px}
 .contact-item a{font-size:.9rem;font-weight:600;word-break:break-word}
 
-/* Footer */
 footer{
   margin-left:var(--sidebar-w);
   padding:24px 48px 40px;
@@ -193,7 +184,6 @@ footer{
   max-width:calc(var(--max) - var(--sidebar-w));
 }
 
-/* ---------- Mobile ---------- */
 @media (max-width:900px){
   :root{--sidebar-w:0px}
   .sidebar{
@@ -210,7 +200,6 @@ footer{
   footer{margin-left:0;padding:20px;max-width:none;justify-content:center}
 }
 
-/* ---------- Animation ---------- */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:none}
 
@@ -224,7 +213,6 @@ footer{
 
 <body>
 
-<!-- ================= SIDEBAR ================= -->
 <aside class="sidebar">
   <div class="photo-wrap no-photo" id="photoWrap">
     <img class="photo" src="photo.jpg" alt="Nandakumar Duraisamy" onerror="this.parentElement.classList.add('no-photo')" onload="this.parentElement.classList.remove('no-photo')">
@@ -272,7 +260,6 @@ footer{
   </button>
 </aside>
 
-<!-- ================= MAIN ================= -->
 <main class="main">
 
   <section class="hero section reveal" id="about">
@@ -472,10 +459,8 @@ footer{
 </footer>
 
 <script>
-  // Year
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Theme toggle
   (function(){
     var saved = localStorage.getItem('theme');
     document.documentElement.dataset.theme = saved || 'dark';
@@ -488,7 +473,6 @@ footer{
     localStorage.setItem('theme', next);
   });
 
-  // Active nav highlight
   var sections = document.querySelectorAll('.section');
   var navLinks = document.querySelectorAll('.nav a');
   window.addEventListener('scroll', function(){
@@ -502,7 +486,6 @@ footer{
     });
   });
 
-  // Reveal on scroll
   var observer = new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
       if(entry.isIntersecting) entry.target.classList.add('visible');
