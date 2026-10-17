@@ -1,34 +1,515 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Professional profile of Nandakumar Duraisamy — administration, operations, logistics, documentation and business development.">
-<title>Nandakumar Duraisamy | Professional Profile</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nandakumar Duraisamy — CV | Operations & Administration</title>
+<meta name="description" content="Curriculum vitae of Nandakumar Duraisamy — administration, operations, logistics, documentation and business development professional.">
+<meta name="color-scheme" content="light dark">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Ctext x='32' y='44' font-family='system-ui' font-size='26' font-weight='700' text-anchor='middle' fill='%23fff'%3END%3C/text%3E%3C/svg%3E">
+
 <style>
-:root{--bg:#08111f;--panel:#101d30;--ink:#edf4ff;--muted:#a9bad0;--accent:#6ee7c2;--line:#26384f}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:1050px;margin:auto;padding:0 22px}.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:18px;flex-wrap:wrap}.brand{font-weight:800;letter-spacing:.4px}.navlinks{display:flex;gap:18px;flex-wrap:wrap;font-size:.92rem}.hero{padding:68px 0 58px;display:grid;grid-template-columns:1.5fr .8fr;gap:36px;align-items:center}.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:2px;font-weight:750;font-size:.78rem}h1{font-size:clamp(2.5rem,7vw,4.8rem);line-height:1.04;letter-spacing:-2px;margin:12px 0 18px}h2{font-size:1.8rem;line-height:1.2;margin:0 0 20px}h3{margin:0 0 5px}.lead{color:var(--muted);font-size:1.12rem;max-width:680px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;padding:11px 17px;border-radius:12px;background:var(--accent);color:#062017;font-weight:800}.btn.secondary{background:transparent;border:1px solid var(--line);color:var(--ink)}.profile{background:linear-gradient(145deg,#132943,#0c1728);border:1px solid var(--line);padding:26px;border-radius:24px}.initials{width:78px;height:78px;border-radius:22px;background:var(--accent);color:#082018;display:grid;place-items:center;font-size:1.65rem;font-weight:900;margin-bottom:20px}.profile p,.muted{color:var(--muted)}.profile strong{color:var(--ink)}section{padding:42px 0;border-top:1px solid var(--line)}.section-intro{color:var(--muted);margin-top:-10px;margin-bottom:24px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}.card p{color:var(--muted);margin:7px 0 0}.date{color:var(--accent);font-size:.88rem;font-weight:750}.tags{display:flex;gap:9px;flex-wrap:wrap}.tag{border:1px solid var(--line);background:#0d192a;border-radius:999px;padding:7px 12px;color:#d8e5f7;font-size:.92rem}.edu{margin-bottom:17px}.contact{display:flex;gap:12px;flex-wrap:wrap}.contact .card{flex:1;min-width:220px}footer{padding:30px 0 42px;color:var(--muted);font-size:.9rem}.small{font-size:.9rem;color:var(--muted)}@media(max-width:720px){.hero{grid-template-columns:1fr;padding:42px 0}.grid{grid-template-columns:1fr}.navlinks{gap:12px}h1{letter-spacing:-1px}.wrap{padding:0 17px}}
+:root{
+  --bg:#111;
+  --sidebar:#0d0d0d;
+  --card:#1a1a1a;
+  --ink:#f2f2f2;
+  --muted:#9a9a9a;
+  --line:#2a2a2a;
+  --accent:#c8a45d;
+  --accent-soft:#2a2418;
+  --sidebar-w:300px;
+  --max:1200px;
+  --radius:8px;
+}
+html[data-theme="light"]{
+  --bg:#f7f6f3;
+  --sidebar:#efeee9;
+  --card:#ffffff;
+  --ink:#1a1a1a;
+  --muted:#6b6b6b;
+  --line:#dedbd3;
+  --accent:#8a6d3b;
+  --accent-soft:#f1ead9;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:16px/1.7 "Inter",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  transition:background .25s,color .25s;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{font-weight:600;line-height:1.15;margin:0}
+
+/* ---------- Sidebar ---------- */
+.sidebar{
+  position:fixed;top:0;left:0;bottom:0;width:var(--sidebar-w);
+  background:var(--sidebar);border-right:1px solid var(--line);
+  padding:40px 28px;overflow-y:auto;z-index:10;
+  display:flex;flex-direction:column;
+  transition:background .25s;
+}
+.photo-wrap{
+  width:130px;height:130px;margin:0 auto 24px;border-radius:50%;
+  overflow:hidden;border:2px solid var(--line);background:var(--card);
+  display:grid;place-items:center;
+}
+.photo{width:100%;height:100%;object-fit:cover;display:block}
+.photo-fallback{font-size:2rem;font-weight:700;color:var(--accent);display:none}
+.photo-wrap.no-photo .photo{display:none}
+.photo-wrap.no-photo .photo-fallback{display:block}
+
+.sidebar h1{font-size:1.3rem;text-align:center;margin-bottom:4px}
+.sidebar .role{
+  font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;
+  color:var(--accent);text-align:center;margin-bottom:28px;font-weight:600;
+}
+
+.nav{list-style:none;padding:0;margin:0 0 28px}
+.nav li{margin-bottom:4px}
+.nav a{
+  display:block;padding:8px 12px;border-radius:6px;
+  font-size:.85rem;color:var(--muted);font-weight:500;
+  transition:background .18s,color .18s;
+}
+.nav a:hover,.nav a.active{background:var(--accent-soft);color:var(--accent);text-decoration:none}
+
+.side-block{margin-bottom:24px}
+.side-block h3{
+  font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;
+  color:var(--muted);margin-bottom:8px;font-weight:600;
+}
+.side-block p{font-size:.85rem;margin:0 0 4px;color:var(--ink)}
+.side-block a{font-size:.85rem}
+.social-row{display:flex;gap:8px;margin-top:8px}
+.social{
+  display:grid;place-items:center;width:34px;height:34px;
+  border-radius:8px;background:var(--card);border:1px solid var(--line);
+  color:var(--ink);transition:background .18s,border-color .18s;
+}
+.social:hover{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);text-decoration:none}
+.social svg{width:15px;height:15px;fill:currentColor}
+
+.theme-btn{
+  margin-top:auto;display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:10px;border-radius:8px;border:1px solid var(--line);
+  background:var(--card);color:var(--ink);cursor:pointer;
+  font-size:.8rem;font-weight:600;width:100%;
+  transition:border-color .18s,color .18s;
+}
+.theme-btn:hover{border-color:var(--accent);color:var(--accent)}
+.theme-btn svg{width:16px;height:16px;fill:currentColor}
+html[data-theme="light"] .icon-moon{display:none}
+html[data-theme="dark"] .icon-sun{display:none}
+
+/* ---------- Main ---------- */
+.main{
+  margin-left:var(--sidebar-w);
+  padding:60px 48px 80px;
+  max-width:calc(var(--max) - var(--sidebar-w));
+}
+.section{margin-bottom:56px}
+.section-title{
+  font-size:.72rem;text-transform:uppercase;letter-spacing:.18em;
+  color:var(--accent);margin-bottom:24px;font-weight:700;
+}
+
+/* Hero */
+.hero h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.03em;margin-bottom:12px}
+.hero .tagline{font-size:1.1rem;color:var(--muted);max-width:60ch;margin-bottom:24px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:12px 22px;border-radius:8px;
+  font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  background:var(--accent);color:#111;border:1px solid var(--accent);
+  transition:opacity .18s,transform .18s;
+}
+.btn:hover{text-decoration:none;opacity:.9;transform:translateY(-2px)}
+.btn.secondary{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.secondary:hover{border-color:var(--accent);color:var(--accent);background:transparent}
+
+/* Cards */
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;margin-bottom:16px;
+  transition:border-color .2s,transform .2s;
+}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap}
+.card-head h3{font-size:1rem}
+.card-head .dates{font-size:.78rem;color:var(--muted);white-space:nowrap}
+.card .org{font-size:.85rem;color:var(--accent);font-weight:600;margin:2px 0 10px}
+.card ul{margin:0;padding-left:18px;color:var(--muted);font-size:.9rem}
+.card li{margin-bottom:5px}
+.card li::marker{color:var(--accent)}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.skill-item{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px;font-size:.88rem;font-weight:500;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.skill-item span:last-child{color:var(--accent);font-size:.75rem;font-weight:700}
+
+/* Languages */
+.lang-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.lang-item{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px;display:flex;justify-content:space-between;
+  font-size:.9rem;
+}
+.lang-item span:last-child{color:var(--muted);font-size:.8rem}
+
+/* Education */
+.edu-item{margin-bottom:18px}
+.edu-item h3{font-size:.95rem;margin-bottom:2px}
+.edu-item .school{font-size:.85rem;color:var(--muted);margin:0}
+.edu-item .grade{font-size:.78rem;color:var(--accent);margin-top:2px}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.contact-item{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px;
+}
+.contact-item .label{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:4px}
+.contact-item a{font-size:.9rem;font-weight:600;word-break:break-word}
+
+/* Footer */
+footer{
+  margin-left:var(--sidebar-w);
+  padding:24px 48px 40px;
+  border-top:1px solid var(--line);
+  font-size:.78rem;color:var(--muted);
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  max-width:calc(var(--max) - var(--sidebar-w));
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width:900px){
+  :root{--sidebar-w:0px}
+  .sidebar{
+    position:static;width:auto;height:auto;border-right:none;border-bottom:1px solid var(--line);
+    padding:32px 20px;text-align:center;
+  }
+  .photo-wrap{margin-left:auto;margin-right:auto}
+  .nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px}
+  .nav li{margin:0}
+  .nav a{padding:6px 10px;font-size:.8rem}
+  .side-block{max-width:400px;margin-left:auto;margin-right:auto}
+  .social-row{justify-content:center}
+  .main{margin-left:0;padding:40px 20px 60px;max-width:none}
+  footer{margin-left:0;padding:20px;max-width:none;justify-content:center}
+}
+
+/* ---------- Animation ---------- */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
 </style>
 </head>
+
 <body>
-<header class="wrap nav"><a class="brand" href="#top">ND<span style="color:var(--accent)">.</span></a><nav class="navlinks" aria-label="Main navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a></nav></header>
-<main id="top" class="wrap">
-<section class="hero" style="border-top:0;padding-top:35px">
-<div><div class="eyebrow">Professional Profile</div><h1>Nandakumar<br>Duraisamy</h1><p class="lead">Administration · Operations · Logistics · Documentation · Business Development</p><p class="muted">A versatile professional with experience spanning administrative leadership, international logistics and documentation, warehouse operations, customer relationships and sales management.</p><div class="actions"><a class="btn" href="resume.pdf" download>Download Resume PDF ↓</a><a class="btn secondary" href="#contact">Contact me</a></div></div>
-<aside class="profile"><div class="initials">ND</div><div class="eyebrow">Professional focus</div><h3>Operations & Administration</h3><p>Connecting people, processes and documentation to support reliable day-to-day operations.</p><p><strong>Based in</strong><br>Erode, Tamil Nadu, India</p><p><strong>Languages</strong><br>Tamil, English, French, Malayalam, Hindi and Telugu</p></aside>
-</section>
-<section id="about"><div class="eyebrow">Introduction</div><h2>About me</h2><p class="lead">I bring a cross-functional background across administration, operations, logistics documentation, warehouse coordination, client relationship management and business development.</p><p class="muted">My experience includes supporting operational workflows, coordinating teams, maintaining business records, handling import/export documentation, managing client relationships and contributing to business goals. I hold a Bachelor of Engineering in Textile Engineering and a Diploma in Textile Technology.</p></section>
-<section id="experience"><div class="eyebrow">Career history</div><h2>Professional experience</h2><p class="section-intro">Selected roles and responsibilities based on my resume.</p><div class="grid">
-<article class="card"><div class="date">2023 – Current · Erode, India</div><h3>Chief Administrative Officer</h3><p><strong>Amble Colors Pvt Ltd</strong></p><p>Administrative operations, budget and financial coordination, policy and process implementation, staffing support, workflow planning, compliance, customer service and cross-functional coordination.</p></article>
-<article class="card"><div class="date">2021 – 2023 · Abidjan, Côte d’Ivoire</div><h3>Senior Documentation Executive</h3><p><strong>AFIC Logistics SARL</strong></p><p>Logistics documentation, import/export records, customs-clearance coordination, invoice and packing-list checks, shipment tracking and coordination with clients and freight partners.</p></article>
-<article class="card"><div class="date">2019 – 2021 · Abidjan, Côte d’Ivoire</div><h3>Warehouse Incharge</h3><p><strong>A.S Shipping SARL</strong></p><p>Daily warehouse operations, inventory and shipping schedules, order fulfilment, storage organization and safety procedures.</p></article>
-<article class="card"><div class="date">2018 – 2019 · Tiruppur, India</div><h3>Team Leader</h3><p><strong>Ventura Securities</strong></p><p>Team coordination, operational workflow, staff guidance, process improvements and sales performance support.</p></article>
-<article class="card"><div class="date">2017 – 2018 · Erode, India</div><h3>Relationship Manager</h3><p><strong>Religare Securities Ltd</strong></p><p>Retail, HNI and corporate client relationships, business development, investment-account marketing and team lead generation.</p></article>
-<article class="card"><div class="date">2016 – 2017 · Erode, India</div><h3>Relationship Manager – Sales</h3><p><strong>Angel Broking Pvt Ltd</strong></p><p>Client acquisition, Demat and trading accounts, client support, cross-selling and sales-team coordination.</p></article>
-<article class="card"><div class="date">2011 – 2016 · Salem, India</div><h3>Manager – Sales & Administration</h3><p><strong>Club & Travel Industry</strong></p><p>Sales and marketing activities, team development, customer relationships, office administration and target coordination.</p></article>
-<article class="card"><div class="date">2009 – 2011 · Salem, India</div><h3>Customer Relationship Manager</h3><p><strong>Club & Travel Industry</strong></p><p>Lead generation, client meetings, customer records, telesales coordination and CRM process support.</p></article>
-<article class="card"><div class="date">2008 – 2009 · Tiruppur, India</div><h3>Business Development Executive</h3><p><strong>Textile Chemical Industry</strong></p><p>Textile-chemical product promotion, customer conversion, product presentations and client follow-up.</p></article>
-</div></section>
-<section id="skills"><div class="eyebrow">What I bring</div><h2>Core skills</h2><div class="tags"><span class="tag">Operations Management</span><span class="tag">Administration</span><span class="tag">Logistics Coordination</span><span class="tag">Import & Export Documentation</span><span class="tag">Document Management</span><span class="tag">Warehouse Operations</span><span class="tag">Team Leadership</span><span class="tag">Relationship Management</span><span class="tag">Budget Coordination</span><span class="tag">Business Development</span><span class="tag">Process Improvement</span><span class="tag">Customer Service</span><span class="tag">SAP SD</span><span class="tag">Tally & GST</span><span class="tag">Microsoft Office</span><span class="tag">Inventory & Invoicing</span></div></section>
-<section id="education"><div class="eyebrow">Qualifications</div><h2>Education</h2><div class="card edu"><div class="date">2005 – 2008</div><h3>Bachelor of Engineering — Textile Engineering</h3><p>Vinayaka Mission University, Salem · First class · 76.5%</p></div><div class="card edu"><div class="date">2001 – 2004</div><h3>Diploma in Textile Technology</h3><p>Erode Institute of Technology, Erode · First class with honours · 85.5%</p></div><div class="card"><div class="date">2001</div><h3>SSLC</h3><p>A.T.M. Higher Secondary School, Erode · 84.4%</p></div></section>
-<section id="contact"><div class="eyebrow">Get in touch</div><h2>Contact</h2><p class="section-intro">For professional opportunities, please contact me by email or phone.</p><div class="contact"><div class="card"><div class="date">EMAIL</div><h3><a href="mailto:nandakumarduraisamy@outlook.com">nandakumarduraisamy@outlook.com</a></h3></div><div class="card"><div class="date">PHONE</div><h3><a href="tel:+919092288969">+91 90922 88969</a></h3></div></div><p class="small" style="margin-top:18px">Please use the contact details above for professional enquiries.</p></section>
-</main><footer class="wrap"><div>© <span id="year">2026</span> Nandakumar Duraisamy · Professional portfolio</div><div class="small">Built as a lightweight, mobile-friendly website.</div></footer>
-</body></html>
+
+<!-- ================= SIDEBAR ================= -->
+<aside class="sidebar">
+  <div class="photo-wrap no-photo" id="photoWrap">
+    <img class="photo" src="photo.jpg" alt="Nandakumar Duraisamy" onerror="this.parentElement.classList.add('no-photo')" onload="this.parentElement.classList.remove('no-photo')">
+    <div class="photo-fallback" aria-hidden="true">ND</div>
+  </div>
+
+  <h1>Nandakumar<br>Duraisamy</h1>
+  <p class="role">Operations · Administration</p>
+
+  <ul class="nav">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#languages">Languages</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="side-block">
+    <h3>Contact</h3>
+    <p><a href="mailto:nandakumarduraisamy@outlook.com">nandakumarduraisamy@outlook.com</a></p>
+    <p><a href="tel:+919092288969">+91 90922 88969</a></p>
+    <p>Erode, Tamil Nadu, India</p>
+  </div>
+
+  <div class="side-block">
+    <h3>Connect</h3>
+    <div class="social-row">
+      <a class="social" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+      </a>
+      <a class="social" href="https://wa.me/919092288969" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+      </a>
+      <a class="social" href="mailto:nandakumarduraisamy@outlook.com" aria-label="Email">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle theme">
+    <svg class="icon-sun" viewBox="0 0 24 24"><path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5a1 1 0 0 1 1 1V22a1 1 0 1 1-2 0v-1.5a1 1 0 0 1 1-1Zm0-19a1 1 0 0 1 1 1V3a1 1 0 1 1-2 0V1.5a1 1 0 0 1 1-1Zm10 10a1 1 0 0 1-1 1h-1.5a1 1 0 1 1 0-2H21a1 1 0 0 1 1 1ZM5.5 12a1 1 0 0 1-1 1H3a1 1 0 1 1 0-2h1.5a1 1 0 0 1 1 1Zm12.4-6.4a1 1 0 0 1 0 1.4l-1 1a1 1 0 1 1-1.5-1.4l1.1-1a1 1 0 0 1 1.4 0ZM8.6 15.9a1 1 0 0 1 0 1.4l-1.1 1a1 1 0 0 1-1.4-1.4l1-1a1 1 0 0 1 1.5 0Zm9.3 2.4a1 1 0 0 1-1.4 1.4l-1-1a1 1 0 1 1 1.4-1.5l1 1.1ZM8.6 8.1a1 1 0 0 1-1.5 0l-1-1a1 1 0 0 1 1.4-1.5l1.1 1.1a1 1 0 0 1 0 1.4Z"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24"><path d="M20.7 14.6A8.6 8.6 0 0 1 9.4 3.3a1 1 0 0 0-1.3-1.2A10.6 10.6 0 1 0 22 15.9a1 1 0 0 0-1.3-1.3Z"/></svg>
+    <span>Toggle Theme</span>
+  </button>
+</aside>
+
+<!-- ================= MAIN ================= -->
+<main class="main">
+
+  <section class="hero section reveal" id="about">
+    <p class="section-title">Profile</p>
+    <h2>Nandakumar Duraisamy</h2>
+    <p class="tagline">Cross-functional professional spanning administrative leadership, international logistics, documentation, warehouse operations and business development.</p>
+    <div class="hero-actions">
+      <a class="btn" href="resume.pdf" download>Download CV</a>
+      <a class="btn secondary" href="#contact">Get in Touch</a>
+    </div>
+  </section>
+
+  <section class="section reveal" id="experience">
+    <p class="section-title">Experience</p>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Chief Administrative Officer</h3>
+        <span class="dates">2023 – Present</span>
+      </div>
+      <p class="org">Amble Colors Pvt Ltd · Erode, India</p>
+      <ul>
+        <li>Directed administrative operations across finance, contract negotiation, fulfilment, customer service and marketing divisions.</li>
+        <li>Oversaw budget planning, financial management, compliance and staff development.</li>
+        <li>Managed payables, receivables, reconciliations and asset records.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Senior Documentation Executive</h3>
+        <span class="dates">2021 – 2023</span>
+      </div>
+      <p class="org">AFIC Logistics SARL · Abidjan, Côte d’Ivoire</p>
+      <ul>
+        <li>Led logistics documentation and customs compliance for supply-chain operations.</li>
+        <li>Processed import/export records, invoices and packing lists.</li>
+        <li>Coordinated with freight forwarders and resolved shipping discrepancies.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Warehouse Incharge</h3>
+        <span class="dates">2019 – 2021</span>
+      </div>
+      <p class="org">A.S Shipping SARL · Abidjan, Côte d’Ivoire</p>
+      <ul>
+        <li>Supervised daily warehouse operations, inventory and order fulfilment.</li>
+        <li>Coordinated shipping schedules and enforced safety protocols.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Team Leader</h3>
+        <span class="dates">2018 – 2019</span>
+      </div>
+      <p class="org">Ventura Securities · Tiruppur, India</p>
+      <ul>
+        <li>Led a sales team, mentored staff and implemented process improvements.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Relationship Manager</h3>
+        <span class="dates">2017 – 2018</span>
+      </div>
+      <p class="org">Religare Securities Ltd · Erode, India</p>
+      <ul>
+        <li>Managed retail, HNI and corporate client relationships and investment accounts.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Relationship Manager – Sales</h3>
+        <span class="dates">2016 – 2017</span>
+      </div>
+      <p class="org">Angel Broking Pvt Ltd · Erode, India</p>
+      <ul>
+        <li>Acquired Demat/trading clients, cross-sold products and coached subordinates.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Manager – Sales &amp; Administration</h3>
+        <span class="dates">2011 – 2016</span>
+      </div>
+      <p class="org">Club &amp; Travel Industry · Salem, India</p>
+      <ul>
+        <li>Led sales, marketing campaigns, team development and office administration.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Customer Relationship Manager</h3>
+        <span class="dates">2009 – 2011</span>
+      </div>
+      <p class="org">Club &amp; Travel Industry · Salem, India</p>
+      <ul>
+        <li>Handled lead generation, CRM implementation and client data management.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Business Development Executive</h3>
+        <span class="dates">2008 – 2009</span>
+      </div>
+      <p class="org">Textile Chemical Industry · Tiruppur, India</p>
+      <ul>
+        <li>Promoted textile-chemical products and converted competitor customers.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section reveal" id="education">
+    <p class="section-title">Education</p>
+    <div class="edu-item">
+      <h3>Bachelor of Engineering — Textile Engineering</h3>
+      <p class="school">Vinayaka Mission University, Salem</p>
+      <p class="grade">First Class · 76.5% · 2005 – 2008</p>
+    </div>
+    <div class="edu-item">
+      <h3>Diploma in Textile Technology</h3>
+      <p class="school">Erode Institute of Technology, Erode</p>
+      <p class="grade">First Class with Honours · 85.5% · 2001 – 2004</p>
+    </div>
+    <div class="edu-item">
+      <h3>SSLC</h3>
+      <p class="school">A.T.M. Higher Secondary School, Erode</p>
+      <p class="grade">First Class · 84.4% · 2001</p>
+    </div>
+  </section>
+
+  <section class="section reveal" id="skills">
+    <p class="section-title">Skills</p>
+    <div class="skills-grid">
+      <div class="skill-item"><span>Operations Management</span><span>Core</span></div>
+      <div class="skill-item"><span>Administration</span><span>Core</span></div>
+      <div class="skill-item"><span>Logistics Coordination</span><span>Core</span></div>
+      <div class="skill-item"><span>Import &amp; Export Documentation</span><span>Core</span></div>
+      <div class="skill-item"><span>Warehouse Operations</span><span>Core</span></div>
+      <div class="skill-item"><span>Team Leadership</span><span>Core</span></div>
+      <div class="skill-item"><span>Budget &amp; Financial Management</span><span>Core</span></div>
+      <div class="skill-item"><span>Business Development</span><span>Core</span></div>
+      <div class="skill-item"><span>SAP SD</span><span>Tool</span></div>
+      <div class="skill-item"><span>Tally &amp; GST</span><span>Tool</span></div>
+      <div class="skill-item"><span>Microsoft Office</span><span>Tool</span></div>
+      <div class="skill-item"><span>Process Optimization</span><span>Core</span></div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="languages">
+    <p class="section-title">Languages</p>
+    <div class="lang-grid">
+      <div class="lang-item"><span>Tamil</span><span>Native</span></div>
+      <div class="lang-item"><span>English</span><span>Proficient</span></div>
+      <div class="lang-item"><span>French</span><span>Intermediate</span></div>
+      <div class="lang-item"><span>Malayalam</span><span>Intermediate</span></div>
+      <div class="lang-item"><span>Hindi</span><span>Beginner</span></div>
+      <div class="lang-item"><span>Telugu</span><span>Beginner</span></div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="contact">
+    <p class="section-title">Contact</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="label">Email</div>
+        <a href="mailto:nandakumarduraisamy@outlook.com">nandakumarduraisamy@outlook.com</a>
+      </div>
+      <div class="contact-item">
+        <div class="label">Phone</div>
+        <a href="tel:+919092288969">+91 90922 88969</a>
+      </div>
+      <div class="contact-item">
+        <div class="label">LinkedIn</div>
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">View Profile →</a>
+      </div>
+      <div class="contact-item">
+        <div class="label">WhatsApp</div>
+        <a href="https://wa.me/919092288969" target="_blank" rel="noopener">Chat →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>© <span id="year"></span> Nandakumar Duraisamy</span>
+  <span>CV · Updated 2026</span>
+</footer>
+
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Theme toggle
+  (function(){
+    var saved = localStorage.getItem('theme');
+    document.documentElement.dataset.theme = saved || 'dark';
+  })();
+
+  document.getElementById('themeBtn').addEventListener('click', function(){
+    var root = document.documentElement;
+    var next = root.dataset.theme === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    localStorage.setItem('theme', next);
+  });
+
+  // Active nav highlight
+  var sections = document.querySelectorAll('.section');
+  var navLinks = document.querySelectorAll('.nav a');
+  window.addEventListener('scroll', function(){
+    var pos = window.scrollY + 120;
+    sections.forEach(function(sec){
+      if(pos >= sec.offsetTop && pos < sec.offsetTop + sec.offsetHeight){
+        navLinks.forEach(function(link){
+          link.classList.toggle('active', link.getAttribute('href') === '#' + sec.id);
+        });
+      }
+    });
+  });
+
+  // Reveal on scroll
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(function(el){ observer.observe(el); });
+</script>
+
+</body>
+</html>
